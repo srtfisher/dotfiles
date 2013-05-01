@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Usage: commit
+# Adds all unstaged files and commit it with an argument
+git add -A && git commit -m "$1"

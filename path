@@ -1,0 +1,6 @@
+# Add that to the path
+export PATH=/usr/local/bin:$PATH
+export PATH=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin:$PATH
+
+# Last to override any other those other ones
+export PATH=~/Dropbox/sync/bin:$PATH

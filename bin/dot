@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# dot
+#
+# `dot` handles installation, updates, things like that. Run it periodically
+# to make sure you're on the latest and greatest.
+
+# Set OS X defaults
+source ~/Dropbox/sync/on-boot.sh
+
+# Upgrade homebrew
+source ~/Dropbox/sync/homebrew/install.sh
