@@ -23,3 +23,6 @@ We're going to be syncing the iTerm settings. Go to iTerm -> Preferences. Look f
 
 # On Boot
 By default, it registers a script (on-boot.sh) to be run on boot. You have to change the path to this boot script for it to run before setup. See ZSH/dotfiles.srtfisher.core.plist.
+
+# Private Files
+We have a non-versioned file called .private that will be included in the PATH. See the `path` file for more information.
