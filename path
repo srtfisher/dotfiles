@@ -6,3 +6,5 @@ export PATH=/usr/local/share/npm/bin/:$PATH
 
 # Last to override any other those other ones
 export PATH=~/Dropbox/sync/bin:$PATH
+
+SYNC_BASE=$(dirname $0)

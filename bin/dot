@@ -5,8 +5,23 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
+BIN_BASE=$(dirname $0)
+
+# Import Common
+source $BIN_BASE/../var/common.sh
+
 # Set OS X defaults
-source ~/Dropbox/sync/on-boot.sh
+info "Running on boot script"
+sh $BIN_BASE/../on-boot.sh
+success "Boot script complete"
 
 # Upgrade homebrew
-source ~/Dropbox/sync/homebrew/install.sh
+info "Installing/upgrading homebrew packages"
+sh $BIN_BASE/../homebrew/install.sh
+echo ''
+success "Complete with homebrew"
+
+# Ensure on boot file is schedule to run
+info "Adding bootscript to launch control"
+sh $BIN_BASE/../var/launchctl.sh
+success "Bootscript added"

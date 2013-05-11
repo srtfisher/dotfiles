@@ -4,30 +4,12 @@
 # Author: Sean Fisher <srtfisher@gmail.com>
 # 
 
+SYNC_BASE=$(dirname $0)
+
 echo ''
 
-info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
-}
-
-user () {
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
-}
-
-success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
-}
-
-fail () {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
-  echo ''
-  exit
-}
-
-link_files () {
-  ln -s $1 $2
-  success "linked $1 to $2"
-}
+# Import Common
+source $SYNC_BASE/var/common.sh
 
 echo "Welcome new user I am the mother ship. I like using Dropbox so that this can all be in sync."
 
