@@ -1,0 +1,9 @@
+#!/bin/sh
+PWD=$(pwd)
+BASEDIR=$(dirname $0)
+
+
+MSG=$(gsort -R "$BASEDIR/../var/commit_messages.txt"| head -n 1)
+
+# Commit them now
+commit "$MSG"

@@ -93,7 +93,7 @@ success "Done with on-boot"
 
 # Add to launchctl
 rm -rf ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
-cp ZSH/dotfiles.srtfisher.core.plist ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
+cp ./var/dotfiles.srtfisher.core.plist ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
 
 launchctl load ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
 
