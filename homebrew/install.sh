@@ -13,7 +13,7 @@ brew tap josegonzalez/homebrew-php
 
 # Install the packages we need
 brew install wget gist git-flow mongodb redis mysql nginx curl
-brew install imagemagick composer wp-cli node coreutils
+brew install imagemagick composer wp-cli node coreutils git
 
 # Now Update!
 brew update #gets the information

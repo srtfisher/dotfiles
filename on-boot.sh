@@ -133,7 +133,11 @@ chflags nohidden ~/Library
 defaults write -g WebAutomaticTextReplacementEnabled -bool true
 
 # Permissions on Dropbox Bin
+chmod go-w ~/Dropbox/sync/bin
 chmod +x ~/Dropbox/sync/bin/*
 
 # Set editor to sublime
 export EDITOR='subl'
+
+# Git Mode
+git config --global push.default simple
