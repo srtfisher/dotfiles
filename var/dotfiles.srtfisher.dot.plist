@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Label</key>
+   <string>dotfiles.srtfisher.dot.plist</string>
+
+   <key>OnDemand</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>UserName</key>
+    <string>seanfisher</string>
+    <key>Program</key>
+    <string>~/Dropbox/sync/bin/dot</string>
+
+    <key>StartInterval</key>
+        <integer>3600</integer>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
