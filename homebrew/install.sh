@@ -20,4 +20,6 @@ brew install php54 --with-fpm php54-apc php54-mcrypt
 brew update #gets the information
 brew upgrade #performs the upgrade
 
+curl http://wp-cli.org/installer.sh | bash
+
 echo "Done with homebrew"

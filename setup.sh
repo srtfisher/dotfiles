@@ -39,8 +39,7 @@ source ./homebrew/install.sh
 
 # RUBY Gems that are cool
 info "Starting Ruby gems"
-sudo gem install gifme
-sudo gem install cloudapp
+sudo gem install gifme && sudo gem install cloudapp
 success "Done with gems"
 
 # =====================
@@ -74,9 +73,6 @@ source ./on-boot.sh
 success "Done with on-boot"
 
 # Add to launchctl
-rm -rf ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
-cp ./var/dotfiles.srtfisher.core.plist ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
-
-launchctl load ~/Library/LaunchAgents/dotfiles.srtfisher.core.plist
+sh $SYNC_BASE/var/launchctl.sh
 
 success "Complete!"

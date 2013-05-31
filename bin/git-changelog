@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# Get the latest tag if one exists
+latest_tag = `git tag -l | tail -1`.chomp()
+log_base = latest_tag.length > 0 ? "#{latest_tag}.." : ''
+
+# Git log formatting
+format = ARGV.join ' '
+
+# Show the changes
+system "git log #{log_base} --no-merges #{format} "

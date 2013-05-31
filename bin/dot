@@ -4,6 +4,9 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
+# 
+# It's actually setup to automatically run every hour as per var/launchctl.sh
+# Check out that file for more details.
 
 BIN_BASE=$(dirname $0)
 

@@ -20,7 +20,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Show remaining battery time; hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Expand save panel by default
@@ -82,7 +82,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
-# defaults write com.apple.finder EmptyTrashSecurely -bool false
+defaults write com.apple.finder EmptyTrashSecurely -bool false
 
 # Require password immediately after sleep or screen saver begins
 # defaults write com.apple.screensaver askForPassword -int 1
@@ -133,8 +133,8 @@ chflags nohidden ~/Library
 defaults write -g WebAutomaticTextReplacementEnabled -bool true
 
 # Permissions on Dropbox Bin
-chmod go-w ~/Dropbox/sync/bin
-chmod +x ~/Dropbox/sync/bin/*
+chmod go-w $SYNC_BASE/bin
+chmod +x $SYNC_BASE/bin/*
 
 # Set editor to sublime
 export EDITOR='subl'
