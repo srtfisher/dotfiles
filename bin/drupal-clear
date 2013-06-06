@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+# Clears the cache of a drupal site
+drush cache-clear all
