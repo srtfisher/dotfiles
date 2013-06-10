@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Copy the current path to the clipboard
+
+pwd | pbcopy
+echo "Copied $(pwd) to clipboard"
