@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# Open a sublime project with a single command
+
+# Change this path to the location of your sublime projects
+P_DIR=~/Web/Projects
+
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit
+fi
+
+# Get the project name
+ARG=$1
+PFILE=$P_DIR/$ARG.sublime-project
+
+if [ ! -f $PFILE ]; then
+	echo "Project not found."
+	exit
+fi
+
+open $PFILE
