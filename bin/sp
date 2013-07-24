@@ -20,4 +20,4 @@ if [ ! -f $PFILE ]; then
 	exit
 fi
 
-open $PFILE
+subl --project $PFILE
