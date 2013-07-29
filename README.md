@@ -16,7 +16,7 @@ three computers using this dot file setup but can be expanded to any other amoun
 
 ### Topics
 #### ZSH
-To have ZSH run properly, the theme will be using the [agnoster]<https://gist.github.com/agnoster/3712874> theme. Be sure to install the fonts at <https://gist.github.com/qrush/1595572> to run properly.
+To have ZSH run properly, the theme will be using the [agnoster](https://gist.github.com/agnoster/3712874) theme. Be sure to install the fonts at <https://gist.github.com/qrush/1595572> to run properly.
 
 # iTerm 2
 We're going to be syncing the iTerm settings. Go to iTerm -> Preferences. Look for a setting called "Load Preferences from a custom file". Select the `com.googlecode.iterm2.plist` file found in the iTerm folder of this package.
