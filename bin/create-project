@@ -3,12 +3,11 @@
 # Create a new project for sublime and the web projects folder
 
 # Change this path to the location of your sublime projects
-P_DIR=~/Web/Projects
-WEB_DIR=~/Web
 BIN_BASE=$(dirname $0)
 TPL=$BIN_BASE/../var/default.sublime-project
 
 # Import Common
+source $BIN_BASE/../path
 source $BIN_BASE/../var/common.sh
 
 # Arguments

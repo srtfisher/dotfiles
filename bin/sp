@@ -2,9 +2,6 @@
 #
 # Open a sublime project with a single command
 
-# Change this path to the location of your sublime projects
-P_DIR=~/Web/Projects
-
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
