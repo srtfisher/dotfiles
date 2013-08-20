@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# Create a new project for sublime and the web projects folder
+
+# Change this path to the location of your sublime projects
+P_DIR=~/Web/Projects
+WEB_DIR=~/Web
+BIN_BASE=$(dirname $0)
+TPL=$BIN_BASE/../var/default.sublime-project
+
+# Import Common
+source $BIN_BASE/../var/common.sh
+
+# Arguments
+if [ $# -eq 0 ]
+  then
+    fail "Usage: create-project [project name]"
+    exit
+fi
+
+PROJECT=$1
+PFILE=$P_DIR/$PROJECT.sublime-project
+PROJECT_DIR=$WEB_DIR/$PROJECT
+
+if [ -f $PFILE ]; then
+	fail "Project \"$PROJECT\" already exists."
+	exit
+fi
+
+if [ -d $PROJECT_DIR ]; then
+	fail "Project directory already exists."
+	exit
+fi
+
+mkdir $PROJECT_DIR
+info "Project directory created."
+
+# Copy the file
+cp $TPL $PFILE
+info "Project file copied."
+
+# Update the file
+sed -e "s/PROJECT_NAME/$PROJECT/g" $TPL > $PFILE
+success "Project created."

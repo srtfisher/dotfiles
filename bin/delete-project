@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Delete a sublime project (NOT THE FILES)
+
+# Change this path to the location of your sublime projects
+P_DIR=~/Web/Projects
+WEB_DIR=~/Web
+BIN_BASE=$(dirname $0)
+
+# Import Common
+source $BIN_BASE/../var/common.sh
+
+# Arguments
+if [ $# -eq 0 ]
+  then
+    fail "Usage: delete-project [project name]"
+    exit
+fi
+
+PROJECT=$1
+PFILE=$P_DIR/$PROJECT.sublime-project
+PROJECT_DIR=$WEB_DIR/$PROJECT
+
+if [ ! -f $PFILE ]; then
+	fail "Project \"$PROJECT\" doesn't exists."
+	exit
+fi
+
+rm -rf $PFILE
+
+# We'll try and delete the directory if it's empty
+if [ "$(ls -A $PROJECT_DIR)" ]; then
+     info "Unable to delete project directory, not empty."
+else
+    rm -rf $PROJECT_DIR
+    info "Project Directory deleted (empty)"
+fi
+
+success "Project deleted."
