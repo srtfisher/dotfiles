@@ -1,6 +1,8 @@
 #!/bin/sh
 #
 # Open a sublime project with a single command
+BIN_BASE=$(dirname $0)
+source $BIN_BASE/../path
 
 if [ $# -eq 0 ]
   then

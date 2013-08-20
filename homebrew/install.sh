@@ -14,7 +14,7 @@ brew tap josegonzalez/homebrew-php
 # Install the packages we need
 brew install wget gist git-flow mongodb redis mysql nginx curl hub
 brew install imagemagick composer node coreutils git
-brew install php54 --with-fpm php54-apc php54-mcrypt drush 
+brew install php54 --with-fpm php54-apc php54-mcrypt drush boris
 
 # Now Update!
 brew update #gets the information
