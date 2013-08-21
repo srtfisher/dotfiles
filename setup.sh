@@ -49,7 +49,7 @@ user "CloudApp email?"
 read cloudapp_email
 
 user "CloudApp Password?"
-read cloudapp_password
+read -s cloudapp_password
 
 echo "$cloudapp_email
 $cloudapp_password" > ~/.cloudapp
