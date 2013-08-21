@@ -140,8 +140,8 @@ defaults write -g WebAutomaticTextReplacementEnabled -bool true
 chmod go-w $SYNC_BASE/bin
 chmod +x $SYNC_BASE/bin/*
 
-# Set editor to sublime
-export EDITOR='subl'
-
 # Git Mode
 git config --global push.default simple
+
+# Run Homebrew Installs
+source $SYNC_BASE/bin/dot

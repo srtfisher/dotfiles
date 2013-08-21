@@ -13,3 +13,6 @@ export PATH=~/Dropbox/sync/bin:$PATH
 SYNC_BASE=$(dirname $0)
 P_DIR=~/Web/Projects
 WEB_DIR=~/Web
+
+# Set editor to sublime
+export EDITOR='subl'
