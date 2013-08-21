@@ -5,7 +5,7 @@ export PATH=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 
 # WP CLI
-PATH=$HOME/.composer/bin:$PATH
+PATH=$HOME/.wp-cli/bin:$PATH
 
 # Last to override any other those other ones
 export PATH=~/Dropbox/sync/bin:$PATH
