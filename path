@@ -16,3 +16,4 @@ WEB_DIR=~/Web
 
 # Set editor to sublime
 export EDITOR='subl'
+alias push='git push'
