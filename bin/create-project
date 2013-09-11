@@ -27,12 +27,11 @@ if [ -f $PFILE ]; then
 fi
 
 if [ -d $PROJECT_DIR ]; then
-	fail "Project directory already exists."
-	exit
+	info "Project directory already exists, not creating."
+else
+	mkdir $PROJECT_DIR
+	info "Project directory created."
 fi
-
-mkdir $PROJECT_DIR
-info "Project directory created."
 
 # Copy the file
 cp $TPL $PFILE
