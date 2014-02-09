@@ -5,7 +5,8 @@
 # Can also be used to update new scripts across computers
 # =====================
 echo "Install homebrew and brew packages"
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+#ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # Add dependency repositories
 brew tap homebrew/dupes

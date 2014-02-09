@@ -144,4 +144,4 @@ chmod +x $SYNC_BASE/bin/*
 git config --global push.default simple
 
 # Run Homebrew Installs
-source $SYNC_BASE/bin/dot
+sh ./bin/dot

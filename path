@@ -18,3 +18,4 @@ WEB_DIR=~/Web
 export EDITOR='subl'
 alias push='git push'
 alias rmf='rm -rf'
+alias co='commit'
