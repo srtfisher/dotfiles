@@ -2,8 +2,8 @@
 # These are mostly OSX Settings we are syncing across computers
 
 # DNS Server
-sudo networksetup -setdnsservers Ethernet 184.172.11.98
-sudo networksetup -setdnsservers Wi-Fi 184.172.11.98
+sudo networksetup -setdnsservers Ethernet 8.8.8.8
+sudo networksetup -setdnsservers Wi-Fi 8.8.8.8
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
