@@ -1,0 +1,23 @@
+'exception-reporting':
+  'userId': 'a0dae92a-6018-7183-389b-36296590f348'
+'release-notes':
+  'viewedVersion': '0.86.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '5b52969c4aa4256802f135a95cda593225fbec15'
+'editor':
+  'showIndentGuide': true
+  'softWrapAtPreferredLineLength': true
+'core':
+  'themes': [
+    'spacegray-dark-ui'
+    'monokai'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+  ]
+  'projectHome': '/Users/seanfisher/Web'
+  'audioBeep': false

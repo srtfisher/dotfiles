@@ -1,0 +1,26 @@
+{
+  "name": "atom-runner",
+  "main": "./lib/atom-runner",
+  "version": "1.0.9",
+  "description": "Runs scripts inside of Atom.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lsegal/atom-runner"
+  },
+  "dependencies": {
+    "ansi-to-html": "0.1.x"
+  },
+  "license": "MIT",
+  "readme": "# Atom Runner\n\nThis package will run various script files inside of Atom.\nIt currently supports JavaScript, CoffeeScript, Ruby, Python, and Go. You\ncan add more.\n\n![Example](http://github.com/lsegal/atom-runner/raw/master/resources/screenshot-1.png)\n\n## Using\n\n* Hit Cmd+R to launch the runner for the active window.\n* Hit Ctrl+C to kill a currently running process.\n\n## Configuring\n\nThis package uses the following default configuration:\n\n```cson\n'runner':\n  'scopes':\n    'coffee': 'coffee'\n    'js': 'node'\n    'ruby': 'ruby'\n    'python': 'python'\n    'go': 'go run'\n  'extensions':\n    'spec.coffee': 'jasmine-node --coffee'\n```\n\nYou can add more commands for a given language scope, or add commands by\nextension instead (if multiple extensions use the same syntax). Extensions\nare searched before scopes (syntaxes).\n\nTo do so, add the configuration to `~/.atom/config.cson` in the format provided\nabove.\n\nThe mapping is `SCOPE|EXT => EXECUTABLE`, so to run JavaScript files through\nphantom, you would do:\n\n```cson\n'runner':\n  'scopes':\n    'js': 'phantom'\n```\n\nNote that the `source.` prefix is ignored for syntax scope listings.\n\nSimilarly, in the extension map:\n\n```cson\n'runner':\n  'extensions':\n    'js': 'phantom'\n```\n\nNote that the `.` extension prefix is ignored for extension listings.\n\n## License & Copyright\n\nThis package is Copyright (c) Loren Segal 2014 and is licensed under the MIT\nlicense.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/lsegal/atom-runner/issues"
+  },
+  "homepage": "https://github.com/lsegal/atom-runner",
+  "_id": "atom-runner@1.0.9",
+  "dist": {
+    "shasum": "17e982600d917ad50a1a438c6e36086a8bde9da5"
+  },
+  "_resolved": "/var/folders/07/n76sfsk90s1c2m0c63kg6kcm0000gn/T/d-114220-4075-1dj1kic/package.tgz",
+  "_from": "/var/folders/07/n76sfsk90s1c2m0c63kg6kcm0000gn/T/d-114220-4075-1dj1kic/package.tgz"
+}

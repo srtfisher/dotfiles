@@ -1,0 +1,34 @@
+{
+  "name": "merge-conflicts",
+  "main": "./lib/merge-conflicts",
+  "version": "0.0.9",
+  "private": true,
+  "description": "Resolve git conflicts within Atom",
+  "activationEvents": [
+    "merge-conflicts:detect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smashwilson/merge-conflicts"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "underscore-plus": "1.x",
+    "emissary": "1.x"
+  },
+  "readme": "# Merge Conflicts\n\nResolve your git merge conflicts in Atom!\n\n![conflict-resolution](https://raw.github.com/smashwilson/merge-conflicts/master/docs/conflict-resolution.gif)\n\nThis package detects the conflict markers left by `git merge` and overlays a set of controls for resolving each and navigating among them. Additionally, it displays your progress through a merge.\n\n## Events\n\nThe merge-conflicts plugin emits a number of events that other packages can subscribe to, if they wish. If you want your plugin to consume one, use code like the following:\n\n```coffeescript\natom.on 'merge-conflicts:resolved', (event) ->\n```\n\n * `merge-conflicts:resolved`: broadcast whenever a conflict is resolved. `event.file`: the absolute path of the file in which the conflict was found; `event.total`: the total number of conflicts in that file; `event.resolved`: the number of conflicts that are resolved, including this one.\n * `merge-conflicts:staged`: broadcast whenever a file has been completed and staged for commit. `event.file`: the absolute path of the file that was staged.\n\n## Roadmap\n\nThese are the major features that I'd consider necessary for the package to be basically useful:\n\n * Identification of conflict markers. :white_check_mark:\n * Superimpose conflict resolution controls. :white_check_mark:\n * Resolve conflicts as either side, directly. :white_check_mark:\n * Resolve conflicts by editing in place. :white_check_mark:\n * Navigation among conflict markers within a file. :white_check_mark:\n * Keymap entries for resolution and navigation. :white_check_mark:\n * Show resolution progress for each file. :white_check_mark:\n * Minify and restore the conflict panel. :white_check_mark:\n * Save and stage changes for each file on completion. :white_check_mark:\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/smashwilson/merge-conflicts/issues"
+  },
+  "homepage": "https://github.com/smashwilson/merge-conflicts",
+  "_id": "merge-conflicts@0.0.9",
+  "dist": {
+    "shasum": "43c204dd0f2af16652bb6c21f21f3a86263d8ffa"
+  },
+  "_resolved": "/var/folders/07/n76sfsk90s1c2m0c63kg6kcm0000gn/T/d-114220-4419-dpprtq/package.tgz",
+  "_from": "/var/folders/07/n76sfsk90s1c2m0c63kg6kcm0000gn/T/d-114220-4419-dpprtq/package.tgz"
+}

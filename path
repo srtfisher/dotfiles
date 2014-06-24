@@ -23,3 +23,8 @@ alias pull='git pull'
 alias fetch='git fetch'
 alias branch='git branch'
 alias pullr='git pull --rebase'
+alias up="git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'"
+
+#source $(brew --prefix php-version)/php-version.sh && php-version 5.5
+
+alias phpv='php-version'

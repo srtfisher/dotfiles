@@ -1,10 +1,6 @@
 #!/bin/bash
 # These are mostly OSX Settings we are syncing across computers
 
-# DNS Server
-sudo networksetup -setdnsservers Ethernet 8.8.8.8
-sudo networksetup -setdnsservers Wi-Fi 8.8.8.8
-
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
@@ -144,4 +140,4 @@ chmod +x $SYNC_BASE/bin/*
 git config --global push.default simple
 
 # Run Homebrew Installs
-sh ./bin/dot
+#sh ./bin/dot
