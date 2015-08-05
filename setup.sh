@@ -31,7 +31,7 @@ scutil --set ComputerName "$compname"
 # Atom
 # =====================
 info "Starting Atom..."
-ln -s ~/Dropbox/sync/atom/atom ~/.atom
+ln -s ~/Dropbox/.atom ~/.atom
 success "atom linked with this synced atom folder."
 
 # Homebrew
