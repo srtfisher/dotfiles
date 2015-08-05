@@ -1,4 +1,4 @@
 .private
-atom/atom/storage/
+# atom/atom/storage/
 atom/atom/compile-cache/
 atom/atom/packages/atom-autocomplete-php/indexes/
