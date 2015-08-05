@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Open Current Folder in Sublime
-
-subl .

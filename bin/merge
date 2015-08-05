@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Merge current branch quickly into another
+
+BIN_BASE=$(dirname $0)
+
+# Import Common
+source $BIN_BASE/../path
+source $BIN_BASE/../var/common.sh
+
+# Arguments
+if [ $# -eq 0 ]
+  then
+    fail "Usage: merge [branch]"
+    exit
+fi
+
+BRANCH=$1
+
+# Current branch
+ORIGIN_BRANCH=$(git symbolic-ref -q HEAD)
+ORIGIN_BRANCH=${ORIGIN_BRANCH##refs/heads/}
+ORIGIN_BRANCH=${ORIGIN_BRANCH:-HEAD}
+
+# Switch to branch
+git checkout $BRANCH
+
+# Merge in other branch
+git merge $ORIGIN_BRANCH --no-edit
+
+# Push it up to the sky
+push
+
+# Change back to other branch
+if [ $? -eq 0 ]; then
+  git checkout $ORIGIN_BRANCH
+else
+  fail "Error merging"
+fi

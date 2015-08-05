@@ -43,3 +43,13 @@ source ~/Dropbox/sync/path
 source ~/Dropbox/sync/.private
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/Web/broadway/bin
+
+# added by travis gem
+[ -f /Users/seanfisher/.travis/travis.sh ] && source /Users/seanfisher/.travis/travis.sh
+
+function kp {
+  ssh -t sean@mosco.alley.ws "sudo su -c 'kedpm -c'"
+}
+
+source ~/Dropbox/sync/.iterm2_shell_integration.zsh

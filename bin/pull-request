@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# Pull request for the current branch
+
+BIN_BASE=$(dirname $0)
+
+# Import Common
+source $BIN_BASE/../path
+source $BIN_BASE/../var/common.sh
+
+# Make a pull request
+hub pull-request | pbcopy
+
+# Change back to other branch
+if [ $? -eq 0 ]; then
+  # All good
+  success "In your clipboard."
+else
+  fail "Error merging"
+fi

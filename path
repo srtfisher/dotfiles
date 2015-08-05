@@ -1,7 +1,6 @@
 # Add that to the path
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 
 # WP CLI
@@ -14,8 +13,9 @@ SYNC_BASE=$(dirname $0)
 P_DIR=~/Web/Projects
 WEB_DIR=~/Web
 
-# Set editor to sublime
-export EDITOR='subl'
+# Set editor
+export EDITOR='atom'
+export SVN_EDITOR=nano
 alias push='git push'
 alias rmf='rm -rf'
 alias co='commit'

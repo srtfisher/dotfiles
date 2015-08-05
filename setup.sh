@@ -2,7 +2,7 @@
 # Setting up a new machine which my things
 #
 # Author: Sean Fisher <srtfisher@gmail.com>
-# 
+#
 
 SYNC_BASE=$(dirname $0)
 
@@ -28,11 +28,11 @@ info "Setting computer name to $compname"
 scutil --set ComputerName "$compname"
 
 # =====================
-# Sublime
+# Atom
 # =====================
-info "Starting Sublime..."
-./sublime/link.sh
-success "Sublime linked with this the sublime folder."
+info "Starting Atom..."
+ln -s ~/Dropbox/sync/atom/atom ~/.atom
+success "atom linked with this synced atom folder."
 
 # Homebrew
 source ./homebrew/install.sh

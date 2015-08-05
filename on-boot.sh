@@ -138,6 +138,7 @@ chmod +x $SYNC_BASE/bin/*
 
 # Git Mode
 git config --global push.default simple
+git config --global core.editor "atom --wait"
 
 # Run Homebrew Installs
 #sh ./bin/dot

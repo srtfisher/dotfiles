@@ -12,8 +12,6 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew tap homebrew/dupes
 brew tap josegonzalez/homebrew-php
 
-# Remove old packages
-brew uninstall php54 php54-mcrypt php54-apc
 
 # Now Update!
 brew update #gets the information
@@ -31,12 +29,9 @@ brew unlink php55
 # PHP 5.6
 brew install php56 --with-fpm php56-mcrypt php56-redis php56-xdebug
 brew install php56-jsmin php56-uploadprogress php56-gearman php56-solr php56-mongo
-brew unlink php56
 
-brew install php-version
-
-# Setup php v
-source $(brew --prefix php-version)/php-version.sh && php-version 5
+# Link the PHP to use
+brew link php56
 
 # Install php utils
 brew install wp-cli boris
